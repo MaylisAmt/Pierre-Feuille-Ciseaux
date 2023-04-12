@@ -1,0 +1,36 @@
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+#compteurs {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    text-align: center;
+    color: plum;
+}
+
+#BoutonsP1 #BoutonsP2 {
+    display: flex;
+    flex-direction: column;
+}
+
+#boutonRejouer {
+    display: flex;
+    justify-content: center;
+}
+
+#boutonValider {
+    display: flex;
+    justify-content: center;
+}
+
+#Player1 {
+    display: flex;
+}
+#Player2 {
+    display: flex;
+}
