@@ -18,6 +18,14 @@ h1 {
     flex-direction: column;
 }
 
+#Joueur2 {
+    margin-top: 25px;
+}
+
+#valider {
+    margin-top: 25px;
+}
+
 #boutonRejouer {
     display: flex;
     justify-content: center;
