@@ -1,10 +1,16 @@
 body {
     font-family: 'Quicksand', serif;
     font-size: 30px;
+    background-image: linear-gradient(to bottom right, azure, white, rgb(228, 143, 235));
+    height: 100vh;
 }
 
 button {
     font-family: 'Quicksand', serif;
+}
+
+#choixP1, #choixP2 {
+    opacity: 0;
 }
 
 main {
@@ -22,32 +28,20 @@ h1 {
     color: plum;
 }
 
-#BoutonsP1 #BoutonsP2 {
+#BoutonsP1, #BoutonsP2 {
     display: flex;
     flex-direction: column;
 }
 
-#Joueur2 {
+#Joueur2, #valider {
     margin-top: 25px;
 }
 
-#valider {
-    margin-top: 25px;
-}
-
-#boutonRejouer {
+#boutonRejouer, #boutonValider {
     display: flex;
     justify-content: center;
 }
 
-#boutonValider {
-    display: flex;
-    justify-content: center;
-}
-
-#Player1 {
-    display: flex;
-}
-#Player2 {
+#Player1, #Player2 {
     display: flex;
 }

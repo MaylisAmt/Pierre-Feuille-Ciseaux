@@ -51,38 +51,62 @@ const enableButtonsPlayer1 = () => {
 
 disableButtonsPlayer2()
 
-
+let imagePierre = document.createElement("img")
+let imageFeuille = document.createElement("img")
+let imageCiseaux = document.createElement("img")
 
 document.getElementById("PierreP1").addEventListener("click", () =>{
     choixP1.innerText = "P"
-    console.log("J'ai cliqué sur pierre")
+    imagePierre.id = "pierreImageJ1"
+    imagePierre.src = "/Pierre.png"
+    document.getElementById("imageP1").appendChild(imagePierre)
+    
 })
 document.getElementById("FeuilleP1").addEventListener("click", () =>{
     choixP1.innerText = "F"
-    console.log("J'ai cliqué sur feuille")
+    imageFeuille.id = "feuilleImageJ1"
+    imageFeuille.src = "/Papier.png"
+    document.getElementById("imageP1").appendChild(imageFeuille)
 })
 document.getElementById("CiseauxP1").addEventListener("click", () =>{
     choixP1.innerText = "C"
-    console.log("J'ai cliqué sur ciseaux")
+    imagePierre.id = "ciseauxImageJ1"
+    imagePierre.src = "/Ciseaux.png"
+    document.getElementById("imageP1").appendChild(imageCiseaux)
 })
 
 document.getElementById("Joueur2").addEventListener("click", () => {
     enableButtonsPlayer2()
     disableButtonsPlayer1()
     choixP1.style.display = "none"
+    if (choixP1.innerText == "P") {
+    document.getElementById("imageP1").removeChild(imagePierre)
+    }
+    else if (choixP1.innerText == "F") {
+    document.getElementById("imageP1").removeChild(imageFeuille)
+    }
+    else if (choixP1.innerText == "C") {
+    document.getElementById("imageP1").removeChild(imageCiseaux)
+    }
 })
 
 document.getElementById("PierreP2").addEventListener("click", () =>{
     choixP2.innerText = "P"
-    console.log("J2 a cliqué sur pierre")
+    imagePierre.id = "pierreImageJ2"
+    imagePierre.src = "/Pierre.png"
+    document.getElementById("imageP2").appendChild(imagePierre)
 })
 document.getElementById("FeuilleP2").addEventListener("click", () =>{
     choixP2.innerText = "F"
-    console.log("J2 a cliqué sur feuille")
+    imageFeuille.id = "feuilleImageJ2"
+    imageFeuille.src = "/Papier.png"
+    document.getElementById("imageP2").appendChild(imageFeuille)
 })
 document.getElementById("CiseauxP2").addEventListener("click", () =>{
     choixP2.innerText = "C"
-    console.log("J2 a cliqué sur ciseaux")
+    imagePierre.id = "ciseauxImageJ2"
+    imagePierre.src = "/Ciseaux.png"
+    document.getElementById("imageP2").appendChild(imageCiseaux)
 })
 
 const gagnant = () => {
@@ -111,7 +135,7 @@ const gagnant = () => {
         scoreP1 = 0
         disableButtons()
         let button = document.createElement("button")
-        button.innerHTML = "Rejouer"
+        button.innerText = "Rejouer"
         button.id = "rejouer"
         document.getElementById("boutonRejouer").appendChild(button)
         document.getElementById("rejouer").addEventListener("click", () => {
@@ -129,6 +153,16 @@ const gagnant = () => {
 
 
 document.getElementById("valider").addEventListener("click", () => {
+    if (choixP2.innerText == "P") {
+        document.getElementById("imageP2").removeChild(imagePierre)
+        }
+        else if (choixP2.innerText == "F") {
+        document.getElementById("imageP2").removeChild(imageFeuille)
+        }
+        else if (choixP2.innerText == "C") {
+        document.getElementById("imageP2").removeChild(imageCiseaux)
+        }
+
     if (choixP1.innerText == "P" && choixP2.innerText == "P"){
         choixP1.innerText = ""
     }
