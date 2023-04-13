@@ -60,6 +60,9 @@ document.getElementById("PierreP1").addEventListener("click", () =>{
     imagePierre.id = "pierreImageJ1"
     imagePierre.src = "/Pierre.png"
     document.getElementById("imageP1").appendChild(imagePierre)
+    document.getElementById("imageP1").removeChild(imageFeuille)
+    document.getElementById("imageP1").removeChild(imageCiseaux)
+    
     
 })
 document.getElementById("FeuilleP1").addEventListener("click", () =>{
@@ -67,12 +70,16 @@ document.getElementById("FeuilleP1").addEventListener("click", () =>{
     imageFeuille.id = "feuilleImageJ1"
     imageFeuille.src = "/Papier.png"
     document.getElementById("imageP1").appendChild(imageFeuille)
+    document.getElementById("imageP1").removeChild(imagePierre)
+    document.getElementById("imageP1").removeChild(imageCiseaux)
 })
 document.getElementById("CiseauxP1").addEventListener("click", () =>{
     choixP1.innerText = "C"
-    imagePierre.id = "ciseauxImageJ1"
-    imagePierre.src = "/Ciseaux.png"
+    imageCiseaux.id = "ciseauxImageJ1"
+    imageCiseaux.src = "/Ciseaux.png"
     document.getElementById("imageP1").appendChild(imageCiseaux)
+    document.getElementById("imageP1").removeChild(imageFeuille)
+    document.getElementById("imageP1").removeChild(imagePierre)
 })
 
 document.getElementById("Joueur2").addEventListener("click", () => {
@@ -93,20 +100,26 @@ document.getElementById("Joueur2").addEventListener("click", () => {
 document.getElementById("PierreP2").addEventListener("click", () =>{
     choixP2.innerText = "P"
     imagePierre.id = "pierreImageJ2"
-    imagePierre.src = "/Pierre.png"
+    imagePierre.src = "/Pierre2.png"
     document.getElementById("imageP2").appendChild(imagePierre)
+    document.getElementById("imageP2").removeChild(imageFeuille)
+    document.getElementById("imageP2").removeChild(imageCiseaux)
 })
 document.getElementById("FeuilleP2").addEventListener("click", () =>{
     choixP2.innerText = "F"
     imageFeuille.id = "feuilleImageJ2"
-    imageFeuille.src = "/Papier.png"
+    imageFeuille.src = "/Papier2.png"
     document.getElementById("imageP2").appendChild(imageFeuille)
+    document.getElementById("imageP2").removeChild(imagePierre)
+    document.getElementById("imageP2").removeChild(imageCiseaux)
 })
 document.getElementById("CiseauxP2").addEventListener("click", () =>{
     choixP2.innerText = "C"
-    imagePierre.id = "ciseauxImageJ2"
-    imagePierre.src = "/Ciseaux.png"
+    imageCiseaux.id = "ciseauxImageJ2"
+    imageCiseaux.src = "/Ciseaux2.png"
     document.getElementById("imageP2").appendChild(imageCiseaux)
+    document.getElementById("imageP2").removeChild(imageFeuille)
+    document.getElementById("imageP2").removeChild(imagePierre)
 })
 
 const gagnant = () => {

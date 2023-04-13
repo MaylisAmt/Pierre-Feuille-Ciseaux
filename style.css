@@ -45,3 +45,40 @@ h1 {
 #Player1, #Player2 {
     display: flex;
 }
+
+#pierreImageJ1, #feuilleImageJ1, #ciseauxImageJ1 {
+    translate: 100px;
+    animation: J1 0.5s linear;
+    
+}
+
+@keyframes J1 {
+    0% {
+        transform: translateX(0px);
+        
+    }
+    100% {
+        transform: translateX(100px);
+    }
+}
+
+#pierreImageJ2, #feuilleImageJ2, #ciseauxImageJ2 {
+    translate: -100px;
+    animation: J2 0.5s linear;
+    
+}
+
+@keyframes J2 {
+    0% {
+        transform: translate(0px);
+        
+    }
+    100% {
+        transform: translate(-100px); 
+    }
+}
+
+#messageWinner {
+    text-align: center;
+    font-size: 48px;
+}
